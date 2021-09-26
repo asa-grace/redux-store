@@ -1,1 +1,1 @@
-# redux-store
+# shop-shop
