@@ -4,7 +4,7 @@ import { useQuery } from '@apollo/client';
 import { idbPromise } from '../utils/helpers';
 
 import Cart from '../components/Cart';
-import { useStoreContext } from '../utils/GlobalState';
+import { Provider } from '../utils/GlobalState';
 import {
   REMOVE_FROM_CART,
   UPDATE_CART_QUANTITY,
@@ -16,7 +16,7 @@ import { QUERY_PRODUCTS } from '../utils/queries';
 import spinner from '../assets/spinner.gif';
 
 function Detail() {
-  const [state, dispatch] = useStoreContext();
+  const [state, dispatch] = Provider();
   const { id } = useParams();
 
   const [currentProduct, setCurrentProduct] = useState({});
